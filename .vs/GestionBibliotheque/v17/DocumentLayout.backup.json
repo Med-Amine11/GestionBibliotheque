@@ -1,0 +1,140 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|c:\\users\\j.p.m\\desktop\\gestionbibliotheque\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|solutionrelative:pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|c:\\users\\j.p.m\\desktop\\gestionbibliotheque\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|solutionrelative:pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|c:\\users\\j.p.m\\desktop\\gestionbibliotheque\\pages\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|solutionrelative:pages\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|c:\\users\\j.p.m\\desktop\\gestionbibliotheque\\pages\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|solutionrelative:pages\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|c:\\users\\j.p.m\\desktop\\gestionbibliotheque\\services\\utilisateurservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|solutionrelative:services\\utilisateurservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|c:\\users\\j.p.m\\desktop\\gestionbibliotheque\\models\\utilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|solutionrelative:models\\utilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|c:\\users\\j.p.m\\desktop\\gestionbibliotheque\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\login.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\login.cshtml.cs",
+              "ToolTip": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\login.cshtml.cs",
+              "RelativeToolTip": "Pages\\login.cshtml.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAABMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T17:13:32.735Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Admin\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-27T20:39:45.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\User\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\User\\Index.cshtml",
+              "ToolTip": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\User\\Index.cshtml",
+              "RelativeToolTip": "Pages\\User\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-27T20:39:29.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-27T19:53:09.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UtilisateurService.cs",
+              "DocumentMoniker": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Services\\UtilisateurService.cs",
+              "RelativeDocumentMoniker": "Services\\UtilisateurService.cs",
+              "ToolTip": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Services\\UtilisateurService.cs",
+              "RelativeToolTip": "Services\\UtilisateurService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T19:26:06.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Utilisateur.cs",
+              "DocumentMoniker": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Models\\Utilisateur.cs",
+              "RelativeDocumentMoniker": "Models\\Utilisateur.cs",
+              "ToolTip": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Models\\Utilisateur.cs",
+              "RelativeToolTip": "Models\\Utilisateur.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T19:19:18.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "login.cshtml",
+              "DocumentMoniker": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\login.cshtml",
+              "RelativeDocumentMoniker": "Pages\\login.cshtml",
+              "ToolTip": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\login.cshtml*",
+              "RelativeToolTip": "Pages\\login.cshtml*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-27T19:18:46.925Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
