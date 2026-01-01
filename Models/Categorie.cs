@@ -4,17 +4,17 @@
     {
         public int Id_categorie { get; set; }
         public string Nom { get; set; }
-        public string Photo { get; set; }
         public string Description { get; set; }
 
+        public String Image {  get; set; }
         public Categorie() { }
 
-        public Categorie(int id_categorie, string nom, string photo, string description)
+        public Categorie(int id_categorie, string nom ,string description , string image)
         {
             Id_categorie = id_categorie;
             Nom = nom;
-            Photo = photo;
             Description = description;
+            Image = image;
         }
     }
 }

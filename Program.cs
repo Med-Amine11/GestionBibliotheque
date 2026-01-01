@@ -1,8 +1,18 @@
+using GestionBibliotheque.Services; 
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-
+// Ajouter le cache en mémoire pour la session
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // durée de vie de la session
+    options.Cookie.HttpOnly = true;                  // protège le cookie côté client
+    options.Cookie.IsEssential = true;              // nécessaire pour fonctionner même si l'utilisateur refuse les cookies facultatifs
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -17,7 +27,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseSession();
 app.UseAuthorization();
 app.MapRazorPages();
 

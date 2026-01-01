@@ -1,0 +1,45 @@
+﻿@page
+@model GestionBibliotheque.Pages.Admin.AjouterCategorieModel
+@{
+}
+<h2 class="text-center mb-4">Ajouter une catégorie</h2>
+
+@if (!string.IsNullOrEmpty(Model.MessageErr))
+{
+    <div class="alert alert-danger alert-dismissible fade show mx-auto" style="max-width: 500px;" role="alert">
+        @Model.MessageErr
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<div class="mx-auto" style="max-width: 500px;">
+    <form method="post" enctype="multipart/form-data">
+
+        <!-- Nom -->
+        <div class="form-group mb-3">
+            <label asp-for="Categorie.Nom"></label>
+            <input asp-for="Categorie.Nom" class="form-control" required />
+        </div>
+
+        <!-- Description -->
+        <div class="form-group mb-3">
+            <label asp-for="Categorie.Description"></label>
+            <textarea asp-for="Categorie.Description" class="form-control" required></textarea>
+        </div>
+
+        <!-- Image -->
+        <div class="form-group mb-3">
+            <label>Image</label>
+            <input type="file" name="Image" class="form-control" required />
+        </div>
+
+        <!-- Boutons -->
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-success">
+                Ajouter
+            </button>
+
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,60 @@
+﻿@page
+@model GestionBibliotheque.Pages.Admin.AjouterUtilisateurModel
+@{
+}
+<h1 style="text-align : center">Ajouter Utilisateur </h1>
+
+<div class="d-flex justify-content-center">
+    <div class="card p-4 shadow" style="width: 700px;">
+        @* Affiche les erreurs globales *@
+        @if (!String.IsNullOrEmpty(Model.MessageErr))
+        {
+            <div class="alert alert-danger">
+              @Model.MessageErr 
+            </div>
+        }
+        <form method="post">
+            <div class="form-group mb-3">
+                <label asp-for="NewUtilisateur.Nom"></label>
+                <input asp-for="NewUtilisateur.Nom" class="form-control" type="text"  required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="NewUtilisateur.Prenom"></label>
+                <input asp-for="NewUtilisateur.Prenom" class="form-control" type="text"  required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="NewUtilisateur.Email"></label>
+                <input asp-for="NewUtilisateur.Email" class="form-control" type ="email" required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="NewUtilisateur.Password"></label>
+                <input asp-for="NewUtilisateur.Password" class="form-control" type="text"  required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="NewUtilisateur.Cin"></label>
+                <input asp-for="NewUtilisateur.Cin" class="form-control" type="text"  required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="NewUtilisateur.Telephone"></label>
+                <input asp-for="NewUtilisateur.Telephone" class="form-control" type="text" required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="NewUtilisateur.Adresse"></label>
+                <input asp-for="NewUtilisateur.Adresse" class="form-control" type ="text" required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="NewUtilisateur.Date_Naissance"></label>
+                <input asp-for="NewUtilisateur.Date_Naissance" class="form-control" type="date" required />
+             </div>
+
+            <button type="submit" class="btn btn-success w-100 mt-2">Ajouter</button>
+        </form>
+    </div>
+</div>

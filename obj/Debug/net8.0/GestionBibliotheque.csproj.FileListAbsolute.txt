@@ -34,3 +34,5 @@ C:\Users\J.P.M\Desktop\GestionBibliotheque\bin\Debug\net8.0\runtimes\unix\lib\ne
 C:\Users\J.P.M\Desktop\GestionBibliotheque\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
 C:\Users\J.P.M\Desktop\GestionBibliotheque\obj\Debug\net8.0\GestionBibliotheque.csproj.AssemblyReference.cache
 C:\Users\J.P.M\Desktop\GestionBibliotheque\obj\Debug\net8.0\GestionB.3410E903.Up2Date
+C:\Users\J.P.M\Desktop\GestionBibliotheque\obj\Debug\net8.0\GestionBibliotheque.sourcelink.json
+C:\Users\J.P.M\Desktop\GestionBibliotheque\bin\Debug\net8.0\libman.json

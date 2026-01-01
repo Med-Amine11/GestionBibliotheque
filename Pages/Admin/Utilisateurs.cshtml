@@ -1,0 +1,70 @@
+﻿@page
+@model GestionBibliotheque.Pages.Admin.UtilisateursModel
+@{
+}
+
+<h1>Liste des utilisateurs</h1>
+<!-- Bouton pour ajouter un nouvel utilisateur, après le tableau -->
+<div class="mt-3">
+    <a asp-page="/Admin/AjouterUtilisateur" class="btn btn-success">
+        Ajouter un nouvel utilisateur
+    </a>
+</div> <br />
+@if (!string.IsNullOrEmpty(Model.MessageSucc))
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @Model.MessageSucc
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+
+    </div>
+}
+@if (!string.IsNullOrEmpty(Model.MessageErr))
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @Model.MessageErr
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+
+    </div>
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>CIN</th>
+            <th>Téléphone</th>
+            <th>Adresse</th>
+            <th>Date de naissance</th>
+            <th>Opérations</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Utilisateurs.Count > 0)
+        {
+            foreach (var user in Model.Utilisateurs)
+            {
+                <tr>
+                    <td>@user.Nom</td>
+                    <td>@user.Prenom</td>
+                    <td>@user.Cin</td>
+                    <td>@user.Telephone</td>
+                    <td>@user.Adresse</td>
+                    <td>@user.Date_Naissance.ToString("dd/MM/yyyy")</td>
+                    <td>
+                        <a class="btn btn-sm btn-primary" asp-page="/Admin/ModifierUtilisateur" asp-route-id="@user.Id_utilisateur">Modifier</a>
+                        <a class="btn btn-sm btn-danger" asp-page-handler="Delete" asp-route-id="@user.Id_utilisateur">Supprimer</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="10" style="text-align : center">Aucun utilisateur trouvé.</td>
+            </tr>
+        }
+    </tbody>
+
+
+</table>

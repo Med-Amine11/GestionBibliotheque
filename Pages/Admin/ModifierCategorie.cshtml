@@ -1,0 +1,59 @@
+﻿@page
+@model GestionBibliotheque.Pages.Admin.ModifierCategorieModel
+@{
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Modifier une catégorie</h2>
+    @if (!string.IsNullOrEmpty(Model.MessageErr))
+    {
+        <div class="alert alert-danger alert-dismissible fade show mx-auto" style="max-width: 500px;" role="alert">
+            @Model.MessageErr
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="mx-auto p-4" style="max-width: 500px;">
+        <form method="post" enctype="multipart/form-data">
+
+            <input asp-for="Categorie.Id_categorie" hidden/>
+
+            <!-- Nom -->
+            <div class="mb-3">
+                <label asp-for="Categorie.Nom" class="form-label fw-bold"></label>
+                <input asp-for="Categorie.Nom" class="form-control" placeholder="Nom de la catégorie" required />
+            </div>
+
+            <!-- Description -->
+            <div class="mb-3">
+                <label asp-for="Categorie.Description" class="form-label fw-bold"></label>
+                <textarea asp-for="Categorie.Description" class="form-control" rows="3" placeholder="Description de la catégorie" required></textarea>
+            </div>
+
+            <!-- Image -->
+            <div class="mb-3">
+                <label asp-for="Categorie.Image" class="form-label fw-bold"></label>
+
+                    <div class="mb-2 text-center">
+                        <img src="~/Images/categories/@Model.Categorie.Image" class="img-fluid img-thumbnail" style="max-height: 180px;" />
+                    </div>
+       
+
+                <input type="file" asp-for="UploadedImage" class="form-control" />
+            </div>
+
+            <!-- Boutons -->
+            <div class="d-flex justify-content-between mt-4">
+                <button type="submit" class="btn btn-success">
+                    Modifier
+                </button>
+                <a asp-page="/Admin/Categories" class="btn btn-secondary">
+                    Annuler
+                </a>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+

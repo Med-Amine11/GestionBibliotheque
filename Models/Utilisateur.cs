@@ -22,7 +22,6 @@
 		public DateTime Date_Naissance { get; set; }
 
 		public Boolean Actif {  get; set; }
-
 		public Utilisateur()
 		{
 
@@ -42,5 +41,7 @@
 			Date_Naissance = date_Naissance;
 			Actif = actif;
 		}
+
+		
 	}
 }
