@@ -1,0 +1,76 @@
+﻿@page
+@model GestionBibliotheque.Pages.Admin.ModifierAuteurModel
+@{
+	
+}
+<div class="mx-auto" style="max-width: 500px;">
+    <h2 class="mb-4">
+        Modifier un auteur
+    </h2>
+    @if (!string.IsNullOrEmpty(Model.MessageErr))
+    {
+        <div class="alert alert-danger alert-dismissible fade show mx-auto" style="max-width: 500px;" role="alert">
+            @Model.MessageErr
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+    <form method="post" enctype="multipart/form-data">
+
+        <!-- Id caché -->
+        <input type="hidden" asp-for="Author.Id_auteur"/>
+
+        <!-- Nom -->
+        <div class="mb-4">
+            <label asp-for="Author.Nom" class="form-label"></label>
+            <input asp-for="Author.Nom" class="form-control" />
+        </div>
+
+        <!-- Prénom -->
+        <div class="mb-4">
+            <label asp-for="Author.Prenom" class="form-label"></label>
+            <input asp-for="Author.Prenom" class="form-control" />
+        </div>
+
+
+        <!-- Date de naissance -->
+        <div class="mb-4">
+            <label asp-for="Author.DateNaissance" class="form-label"></label>
+            <input asp-for="Author.DateNaissance" type="date" class="form-control" />
+        </div>
+
+        <!-- Date de décès -->
+        <div class="mb-4">
+            <label asp-for="Author.DateDeces" class="form-label"></label>
+            <input asp-for="Author.DateDeces" type="date" class="form-control" />
+        </div>
+
+        <!-- Nationalité -->
+        <div class="mb-4">
+            <label asp-for="Author.Nationalite" class="form-label"></label>
+            <input asp-for="Author.Nationalite" class="form-control" />
+        </div>
+
+        <!-- Biographie -->
+        <div class="mb-4">
+            <label asp-for="Author.Biographie" class="form-label"></label>
+            <textarea asp-for="Author.Biographie" rows="4" class="form-control"></textarea>
+        </div>
+
+        <!-- Photo -->
+        <div class="mb-4">
+            <label class="form-label"> Photo </label>
+
+           <div class="mb-2 text-center">
+                <img src="~/images/auteurs/@Model.Author.Photo" alt="Photo de @Model.Author.Nom @Model.Author.Prenom" class="card-img-top" style="height:180px;" />
+            </div>
+            <input type="file" asp-for="Photo" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+           Modifier
+        </button>
+        <a asp-page="/Admin/Auteurs" class="btn btn-secondary ms-2">
+            Annuler
+        </a>
+    </form>
+</div>

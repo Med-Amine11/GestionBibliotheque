@@ -9,6 +9,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\images\\auteurs\\c2a524f2-02fe-464b-9135-94ce7019a3bc.jpg",
+      "PackagePath": "staticwebassets\\images\\auteurs\\c2a524f2-02fe-464b-9135-94ce7019a3bc.jpg"
+    },
+    {
+      "Id": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\images\\categories\\222ea074-07f9-4ea9-9b7b-48debec990b3.jpg",
+      "PackagePath": "staticwebassets\\images\\categories\\222ea074-07f9-4ea9-9b7b-48debec990b3.jpg"
+    },
+    {
       "Id": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

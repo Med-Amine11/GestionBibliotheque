@@ -50,12 +50,15 @@ namespace GestionBibliotheque.Services
                     }
                 }
 
-                con.Close();
             }
             catch (SqlException ex)
             {
                 Console.WriteLine("Je suis dans Utilisateur Service ");
                 Console.WriteLine("Exception : " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
             return utilisateur;
         }
@@ -93,11 +96,14 @@ namespace GestionBibliotheque.Services
                         }
                     }
                 }
-                con.Close();
             }
             catch (SqlException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
             return list;
         }
@@ -127,12 +133,15 @@ namespace GestionBibliotheque.Services
 
                     ligne = cmd.ExecuteNonQuery();
                 }
-                con.Close();
 
             }
             catch (SqlException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
 
             return ligne;
@@ -164,12 +173,15 @@ namespace GestionBibliotheque.Services
 
                     ligne = cmd.ExecuteNonQuery();
                 }
-                con.Close();
 
             }
             catch (SqlException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
 
             return ligne;
@@ -191,12 +203,15 @@ namespace GestionBibliotheque.Services
 
                     ligne = cmd.ExecuteNonQuery();
                 }
-                con.Close();
 
             }
             catch (SqlException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
 
             return ligne;
@@ -222,11 +237,14 @@ namespace GestionBibliotheque.Services
                     count = (int)cmd.ExecuteScalar();
                 }
 
-                con.Close();
             }
             catch (SqlException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
 
             return count;
@@ -253,11 +271,14 @@ namespace GestionBibliotheque.Services
                     count = (int)cmd.ExecuteScalar();
                 }
 
-                con.Close();
             }
             catch (SqlException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
 
             return count;
@@ -282,11 +303,14 @@ namespace GestionBibliotheque.Services
                     count = (int)cmd.ExecuteScalar();
                 }
 
-                con.Close();
             }
             catch (SqlException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
 
             return count;
@@ -309,12 +333,14 @@ namespace GestionBibliotheque.Services
                     // ExecuteScalar retourne la première colonne de la première ligne (ici COUNT(*))
                     count = (int)cmd.ExecuteScalar();
                 }
-
-                con.Close();
             }
             catch (SqlException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
 
             return count;
@@ -334,11 +360,14 @@ namespace GestionBibliotheque.Services
                     count = (int)cmd.ExecuteScalar();
                 }
 
-                con.Close();
             }
             catch (SqlException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
 
             return count;
@@ -358,12 +387,14 @@ namespace GestionBibliotheque.Services
                     cmd.Parameters.AddWithValue("@Id", id);
                     count = (int)cmd.ExecuteScalar();
                 }
-
-                con.Close();
             }
             catch (SqlException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
 
             return count;
@@ -383,11 +414,15 @@ namespace GestionBibliotheque.Services
                     count = (int)cmd.ExecuteScalar();
                 }
 
-                con.Close();
+
             }
             catch (SqlException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
 
             return count;
@@ -410,11 +445,14 @@ namespace GestionBibliotheque.Services
                     count = (int)cmd.ExecuteScalar();
                 }
 
-                con.Close();
             }
             catch (SqlException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
 
             return count;
@@ -434,11 +472,14 @@ namespace GestionBibliotheque.Services
                     cmd.Parameters.AddWithValue("@Id_Utilisteur", id_utilisateur);
                     count = (int)cmd.ExecuteScalar();
                 }
-                con.Close() ;
 
             }catch(SqlException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
             return count;
         }
@@ -478,11 +519,14 @@ namespace GestionBibliotheque.Services
                     }
                 }
 
-                con.Close();
             }
             catch (SqlException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
 
             return utilisateur;

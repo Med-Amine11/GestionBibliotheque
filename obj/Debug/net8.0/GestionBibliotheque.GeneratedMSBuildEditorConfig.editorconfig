@@ -18,8 +18,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\J.P.M\Desktop\GestionBibliotheque
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/AjouterAuteur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWpvdXRlckF1dGV1ci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/AjouterCategorie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWpvdXRlckNhdGVnb3JpZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/AjouterUtilisateur.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWpvdXRlclV0aWxpc2F0ZXVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/Auteurs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQXV0ZXVycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/Categories.cshtml]
@@ -32,6 +44,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/Livres.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTGl2cmVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/ModifierAuteur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTW9kaWZpZXJBdXRldXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/ModifierCategorie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTW9kaWZpZXJDYXRlZ29yaWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/ModifierUtilisateur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTW9kaWZpZXJVdGlsaXNhdGV1ci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/Utilisateurs.cshtml]

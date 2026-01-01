@@ -49,8 +49,14 @@ namespace GestionBibliotheque.Pages.Admin
                 return Page();
 
             }
-
-            if(UtilisateurService.AddUser(NewUtilisateur) == 0 )
+            DateTime DateMin = DateTime.Today.AddYears(-100);
+            DateTime DateMax = DateTime.Today.AddYears(-18);
+            if (NewUtilisateur.Date_Naissance < DateMin || NewUtilisateur.Date_Naissance > DateMax)
+            {
+                MessageErr = "La date de naissance n'est pas valide.";
+                return Page();
+            }
+            if (UtilisateurService.AddUser(NewUtilisateur) == 0 )
             {
                 MessageErr = "Un problème est survenu lors de l'ajout du nouveau utilisateur.";
                 return Page();

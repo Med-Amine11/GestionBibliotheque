@@ -1,0 +1,66 @@
+﻿@page
+@model GestionBibliotheque.Pages.Admin.AjouterAuteurModel
+@{
+}
+@if (!string.IsNullOrEmpty(Model.MessageErr))
+{
+    <div class="alert alert-danger alert-dismissible fade show mx-auto" style="max-width: 500px;" role="alert">
+        @Model.MessageErr
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+<div class="mx-auto" style="max-width: 500px;">
+    <h2 class="mb-4">Ajouter un auteur</h2>
+
+    <form method="post" enctype="multipart/form-data">
+        <!-- Nom -->
+        <div class="mb-4">
+            <label asp-for="Author.Nom" class="form-label"></label>
+            <input asp-for="Author.Nom" class="form-control" required/>
+        </div>
+
+        <!-- Prénom -->
+        <div class="mb-4">
+            <label asp-for="Author.Prenom" class="form-label"></label>
+            <input asp-for="Author.Prenom" class="form-control" required/>
+        </div>
+
+        <!-- Date de naissance -->
+        <div class="mb-4">
+            <label asp-for="Author.DateNaissance" class="form-label"></label>
+            <input asp-for="Author.DateNaissance" type="date" class="form-control" required/>
+        </div>
+
+        <!-- Date de décès -->
+        <div class="mb-4">
+            <label asp-for="Author.DateDeces" class="form-label"></label>
+            <input asp-for="Author.DateDeces" type="date" class="form-control" />
+        </div>
+
+        <!-- Nationalité -->
+        <div class="mb-4">
+            <label asp-for="Author.Nationalite" class="form-label"></label>
+            <input asp-for="Author.Nationalite" class="form-control" required/>
+        </div>
+
+        <!-- Biographie -->
+        <div class="mb-4">
+            <label asp-for="Author.Biographie" class="form-label"></label>
+            <textarea asp-for="Author.Biographie" rows="4" class="form-control" required></textarea>
+        </div>
+
+        <!-- Photo -->
+        <div class="mb-4">
+            <label class="form-label">Photo</label>
+            <input type="file" asp-for="Photo" class="form-control" required/>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Enregistrer
+        </button>
+
+        <a asp-page="/Admin/Auteurs" class="btn btn-secondary ms-2">
+            Annuler
+        </a>
+    </form>
+</div>

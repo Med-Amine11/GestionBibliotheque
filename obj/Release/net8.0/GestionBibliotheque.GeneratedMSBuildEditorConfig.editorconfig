@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\J.P.M\Desktop\GestionBibliotheque
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/AjouterAuteur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWpvdXRlckF1dGV1ci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/AjouterCategorie.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWpvdXRlckNhdGVnb3JpZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

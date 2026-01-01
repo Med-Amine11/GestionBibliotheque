@@ -29,13 +29,16 @@ namespace GestionBibliotheque.Pages.Services
 
                     ligne = cmd.ExecuteNonQuery();
                 }
-                con.Close();
 
             }
             catch (SqlException ex)
             {
                 Console.WriteLine("Je suis ici.");
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
             return ligne;
         }
@@ -51,10 +54,13 @@ namespace GestionBibliotheque.Pages.Services
                     cmd.Parameters.AddWithValue("@Nom", categoryName); 
                     ligne = (int)cmd.ExecuteScalar();
                 }
-                con.Close(); 
             }catch(SqlException ex)
             {
-                Console.WriteLine(ex.Message); 
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
             return ligne; 
         }
@@ -81,11 +87,14 @@ namespace GestionBibliotheque.Pages.Services
                     }
 
                 } 
-               con.Close(); 
             }
             catch (SqlException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
             return categories; 
         }
@@ -102,12 +111,15 @@ namespace GestionBibliotheque.Pages.Services
                     cmd.Parameters.AddWithValue("@id" , id);
                     ligne = cmd.ExecuteNonQuery();
                 }
-                con.Close(); 
 
             }
             catch (SqlException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
 
             return ligne; 
@@ -125,11 +137,14 @@ namespace GestionBibliotheque.Pages.Services
                     cmd.Parameters.AddWithValue("@Id", id);
                     ligne = (int)cmd.ExecuteScalar();
                 }
-                con.Close ();
             }
             catch (SqlException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
 
             return ligne > 0;
@@ -151,10 +166,14 @@ namespace GestionBibliotheque.Pages.Services
                         image = (String)result;
                     }
                 }
-                con.Close();
+
             }catch(SqlException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
             return image; 
         }
@@ -180,11 +199,15 @@ namespace GestionBibliotheque.Pages.Services
                         }
                     }
                 }
-                con.Close();
+
             }
             catch (SqlException ex)
             {
                 Console.WriteLine (ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
             return categorie;
         }
@@ -205,12 +228,15 @@ namespace GestionBibliotheque.Pages.Services
 
                     ligne = cmd.ExecuteNonQuery();
                 }
-                con.Close ();
             }
             catch (SqlException ex)
             {
                 Console.WriteLine (0);
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
             return ligne;
         }

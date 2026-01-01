@@ -26,21 +26,52 @@ namespace GestionBibliotheque.Pages.Services
                     cmd.Parameters.AddWithValue("@Nom", auteur.Nom);
                     cmd.Parameters.AddWithValue("@Prenom", auteur.Prenom);
                     cmd.Parameters.AddWithValue("@Date_naissance", auteur.DateNaissance);
-                    cmd.Parameters.AddWithValue("@Date_deces", auteur.DateDeces);
+                    cmd.Parameters.AddWithValue("@Date_deces", auteur.DateDeces.HasValue? auteur.DateDeces : DBNull.Value);
                     cmd.Parameters.AddWithValue("@Nationalite", auteur.Nationalite);
                     cmd.Parameters.AddWithValue("@Biographie", auteur.Biographie);
                     cmd.Parameters.AddWithValue("@Photo", auteur.Photo);
 
                     ligne = cmd.ExecuteNonQuery();
                 }
-                con.Close();    
-            }catch(SqlException ex)
+
+            }
+            catch (SqlException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
             return ligne;
         }
 
+       
+        public static int CountAuthorsByNomPrenom(String Nom , String Prenom)
+        {
+            int ligne = 0; 
+            try
+            {
+                OpenConnection();
+                String sql = "select count(*) from auteur where nom = @Nom and prenom = @Prenom"; 
+                using(SqlCommand cmd = new SqlCommand(sql , con))
+                {
+                    cmd.Parameters.AddWithValue("@Nom", Nom);
+                    cmd.Parameters.AddWithValue("@Prenom", Prenom);
+
+                    ligne = (int)cmd.ExecuteScalar();
+                }
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return ligne;
+        }
         public static List<Auteur> getAllAuthors()
         {
             List<Auteur> auteurs = new List<Auteur>();
@@ -48,32 +79,205 @@ namespace GestionBibliotheque.Pages.Services
             try
             {
                 OpenConnection();
-
-                string sql = "SELECT * FROM auteur";
-
+                String sql = "select * from auteur";
                 using (SqlCommand cmd = new SqlCommand(sql, con))
                 {
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        while (reader.Read())
-                        {
-                            Auteur auteur = new Auteur
-                            {
-                            };
+                        while (reader.Read()) {
+                            Auteur auteur = new Auteur(
+                                reader.GetInt32(0),
+                                reader.GetString(1),
+                                reader.GetString(2),
+                                reader.GetDateTime(3),
+                                reader.IsDBNull(4) ?  null :  reader.GetDateTime(4) ,
+                                reader.GetString(5),
+                                reader.GetString(6),
+                                reader.GetString(7));
+                        auteurs.Add(auteur);
 
-                            auteurs.Add(auteur);
-                        }
                     }
+
+                }
+            }
+        }
+            catch (SqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return auteurs;
+        }
+
+        public static int CheckAuthorInBooks(int id)
+        {
+            int ligne = 0;
+            try
+            {
+                OpenConnection();
+                String sql = "select count(*) from livre where id_auteur = @Id";
+                using (SqlCommand cmd = new SqlCommand(sql , con))
+                {
+                    cmd.Parameters.AddWithValue("@Id", id); 
+                    ligne = (int)cmd.ExecuteScalar();
+                }
+            }catch(SqlException ex)
+            {
+                Console.WriteLine (ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return ligne;
+        }
+
+        public static String GetAuthorPhotoById(int id)
+        {
+            String photo = null;
+            try
+            {
+                OpenConnection();
+                String sql = "select photo from auteur where id_auteur = @Id"; 
+                using(SqlCommand cmd = new SqlCommand(sql , con))
+                {
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    Object result = cmd.ExecuteScalar();
+                    if(result != null)
+                        photo = (String)result;
                 }
 
-                con.Close();
             }
             catch (SqlException ex)
             {
                 Console.WriteLine(ex.Message);
             }
-
-            return auteurs; // jamais null
+            finally
+            {
+                con.Close();
+            }
+            return photo;
         }
+        public static int DeleteAuthorById(int id)
+        {
+            int ligne = 0;
+            try
+            {
+                OpenConnection ();
+                String sql = "delete from auteur where id_auteur = @Id"; 
+                using(SqlCommand cmd = new SqlCommand(sql , con))
+                {
+                    cmd.Parameters.AddWithValue("@Id" , id);
+                    ligne = cmd.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return ligne;
+        }
+
+        public static Auteur GetAuthorById(int id)
+        {
+            Auteur auteur = null;
+            try
+            {
+                OpenConnection();
+                String sql = "select * from auteur where id_auteur = @Id";
+                using (SqlCommand cmd = new SqlCommand(sql, con))
+                {
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            auteur = new Auteur(reader.GetInt32(0), 
+                                reader.GetString(1) , 
+                                reader.GetString(2) ,
+                                reader.GetDateTime(3) , 
+                                reader.IsDBNull(4) ? null : reader.GetDateTime(4) , 
+                                reader.GetString(5) , 
+                                reader.GetString(6) ,   
+                                reader.GetString(7) 
+                                
+                                );
+                        }
+                    }
+                }
+
+               
+            }catch(SqlException ex){
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return auteur; 
+        }
+
+        public static int UpdateAuthor(Auteur author)
+        {
+            int ligne = 0;
+
+            try
+            {
+                OpenConnection();
+
+                string sql = @"UPDATE auteur 
+                       SET nom = @Nom,
+                           prenom = @Prenom,
+                           date_naissance = @Date_naissance,
+                           date_deces = @Date_deces,
+                           nationalite = @Nationalite,
+                           biographie = @Biographie,
+                           photo = @Photo
+                       WHERE id_auteur = @Id";
+
+                using (SqlCommand cmd = new SqlCommand(sql, con))
+                {
+                    cmd.Parameters.AddWithValue("@Id", author.Id_auteur);
+                    cmd.Parameters.AddWithValue("@Nom", author.Nom);
+                    cmd.Parameters.AddWithValue("@Prenom", author.Prenom);
+                    cmd.Parameters.AddWithValue("@Date_naissance", author.DateNaissance);
+
+                    // Date décès nullable
+                    cmd.Parameters.AddWithValue(
+                        "@Date_deces",
+                        author.DateDeces.HasValue ? author.DateDeces : DBNull.Value
+                    );
+
+                    cmd.Parameters.AddWithValue("@Nationalite", author.Nationalite);
+                    cmd.Parameters.AddWithValue("@Biographie", author.Biographie);
+
+                    // Photo nullable
+                    cmd.Parameters.AddWithValue(
+                        "@Photo",
+                        author.Photo
+                    );
+
+                    ligne = cmd.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+            return ligne;
+        }
+
     }
 }

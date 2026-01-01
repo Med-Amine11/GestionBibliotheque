@@ -22,12 +22,15 @@ namespace GestionBibliotheque.Pages.Services
             {
                 OpenConnection();
 
-                con.Close();
-
+                
             }
             catch (SqlException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
             return liste;
         }
