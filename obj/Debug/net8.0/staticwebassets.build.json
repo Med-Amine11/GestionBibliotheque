@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MyxB/pM0ixTsTpAyEz9bviu43lFuADoko+ZQNLddVOQ=",
+  "Hash": "aRDe74I8jl6jb0huw6ZM1QqaDWEn+21Ytx/AOucC40E=",
   "Source": "GestionBibliotheque",
   "BasePath": "_content/GestionBibliotheque",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\categories\\222ea074-07f9-4ea9-9b7b-48debec990b3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\images\\livres\\image.jpg",
+      "SourceId": "GestionBibliotheque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\",
+      "BasePath": "_content/GestionBibliotheque",
+      "RelativePath": "images/livres/image.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\livres\\image.jpg"
     },
     {
       "Identity": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\js\\site.js",

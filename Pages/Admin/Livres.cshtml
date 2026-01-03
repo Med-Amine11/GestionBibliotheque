@@ -2,4 +2,82 @@
 @model GestionBibliotheque.Pages.Admin.LivresModel
 @{
 }
-<h1>Livres</h1>
+<h2 class="text-center mb-4">Catalogue des livres</h2>
+
+<div class="mt-3">
+    <a asp-page="/Admin/AjouterLivre" class="btn btn-success">
+        Ajouter un nouveau livre
+    </a>
+</div>
+<br />
+@* Affiche les erreurs globales *@
+@if (!String.IsNullOrEmpty(Model.MessageErr))
+{
+    <div class="alert alert-danger" style="text-align : center">
+        @Model.MessageErr
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" ></button>
+    </div>
+}
+<div class="container">
+
+    @if (Model.Livres != null && Model.Livres.Any())
+    {
+        @foreach (var livre in Model.Livres)
+        {
+            <!-- Nom de la catégorie -->
+            <h4 class="mt-4">@livre.NomCategorie</h4>
+
+            <div class="row g-4 mt-2">
+                <div class="col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+
+                        <!-- Image -->
+                        <img src="~/images/livres/@livre.Image"
+                             class="card-img-top"
+                             style="height:180px; object-fit:cover;" />
+
+                        <!-- Contenu -->
+                        <div class="card-body text-center">
+                            <h5 class="card-title">@livre.Titre</h5>
+
+                            <p class="text-muted mb-1">
+                                @livre.PrenomAuteur @livre.NomAuteur
+                            </p>
+
+                            <p class="card-text small">
+                                @livre.Description
+                            </p>
+
+                            <p class="small">
+                                <strong>Stock :</strong>
+                                @livre.NbDisponibles / @livre.NbExemplaires
+                            </p>
+                        </div>
+
+                        <!-- Actions -->
+                        <div class="card-footer text-center bg-white">
+                            <a asp-page="/Admin/Livres/ModifierLivre"
+                               asp-route-id="@livre.Id_livre"
+                               class="btn btn-warning btn-sm me-1">
+                                Modifier
+                            </a>
+
+                            <a asp-page-handler="Delete"
+                               asp-route-id="@livre.Id_livre"
+                               class="btn btn-danger btn-sm">
+                                Supprimer
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p class="text-center text-muted">Aucun livre trouvé</p>
+    }
+
+</div>
+

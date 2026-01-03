@@ -27,5 +27,6 @@
             Biographie = biographie;
             Photo = photo;
         }
+
     }
 }

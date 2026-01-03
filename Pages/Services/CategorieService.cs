@@ -157,6 +157,7 @@ namespace GestionBibliotheque.Pages.Services
             {
                 OpenConnection();
                 String sql = "select photo from categorie where id_categorie = @Id";
+               
                 using (SqlCommand cmd = new SqlCommand(sql, con)) 
                 {
                     cmd.Parameters.AddWithValue("@Id", id);

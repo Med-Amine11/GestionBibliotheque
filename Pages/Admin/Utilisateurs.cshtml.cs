@@ -36,11 +36,13 @@ namespace GestionBibliotheque.Pages.Admin
             if (UtilisateurService.CheckUserInEmprunt(id) > 0)
             {
                 MessageErr = "L'utilisateur a des emprunts ne peut pas etre supprimé.";
+                return Page();
             }
             else if (UtilisateurService.DeleteUser(id) == 0)
             {
                 MessageErr = "Un problème est survenu lors de la suppression de l'utilisateur.";
-               
+                return Page();
+
             }
             else { MessageSucc = "Utilisateur supprimé avec suucès."; }
            

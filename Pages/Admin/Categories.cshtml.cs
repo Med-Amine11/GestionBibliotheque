@@ -34,15 +34,15 @@ namespace GestionBibliotheque.Pages.Admin
 
             if (CategorieService.CheckIdCategoryInLivres(id))
             {
-                MessageErr = "Cette categorie ne peut pas etre supprime, elle est liée à un seul ou plusieurs livres.";
-                return RedirectToPage("/Admin/Categories");
+                MessageErr = "Cette categorie ne peut pas etre supprime, elle est liée à un seul ou plusieurs livre(s).";
+                return Page();
             }
             String Image = CategorieService.GetcategoryImageById(id);
             
             if(CategorieService.DeleteCategoryById(id) == 0)
             {
                 MessageErr = "Un problème est survenu lors de la suppression de la catégorie.";
-                return RedirectToPage("/Admin/Categories");
+                return Page();
             }
             if (!string.IsNullOrEmpty(Image))
             {

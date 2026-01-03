@@ -10,14 +10,20 @@
         public string Image { get; set; }
         public int NbExemplaires { get; set; }
         public int NbDisponibles { get; set; }
-        public int IdAuteur { get; set; }
+       
+        public int Id_auteur {  get; set; }
+
+        public string NomAuteur {  get; set; }
+        public string PrenomAuteur { get; set; }
+
         public int Id_categorie { get; set; }
 
+        public string NomCategorie { get; set; }
         public Livre() { }
 
         public Livre(int id_livre, string titre, string description, DateTime datePublication,
                      int nombrePages, string image, int nbExemplaires, int nbDisponibles,
-                     int idAuteur, int id_categorie)
+                     int id_auteur , string nomAuteur , string prenomAuteur , int id_categorie , string nomCategorie)
         {
             Id_livre = id_livre;
             Titre = titre;
@@ -27,8 +33,11 @@
             Image = image;
             NbExemplaires = nbExemplaires;
             NbDisponibles = nbDisponibles;
-            IdAuteur = idAuteur;
+            Id_auteur = id_auteur;
+            NomAuteur = nomAuteur;
+            PrenomAuteur = prenomAuteur;
             Id_categorie = id_categorie;
+            NomCategorie = nomCategorie; 
         }
     }
 }

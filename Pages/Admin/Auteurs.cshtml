@@ -8,9 +8,10 @@
         Ajouter un nouveau auteur
     </a>
 </div>
+<br />
 @if (!String.IsNullOrEmpty(Model.MessageErr))
 {
-    <div class="alert alert-danger">
+    <div class="alert alert-danger"style="text-align : center">
         @Model.MessageErr
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>

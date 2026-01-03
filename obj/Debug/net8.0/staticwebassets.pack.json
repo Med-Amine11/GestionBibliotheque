@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\images\\categories\\222ea074-07f9-4ea9-9b7b-48debec990b3.jpg"
     },
     {
+      "Id": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\images\\livres\\image.jpg",
+      "PackagePath": "staticwebassets\\images\\livres\\image.jpg"
+    },
+    {
       "Id": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
