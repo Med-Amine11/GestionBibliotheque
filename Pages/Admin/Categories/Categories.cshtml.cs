@@ -57,7 +57,7 @@ namespace GestionBibliotheque.Pages.Admin
                     Console.WriteLine(ex.Message);
                 }
             }
-            return RedirectToPage("/Admin/Categories");
+            return RedirectToPage("/Admin/Categories/Categories");
         }
 
 

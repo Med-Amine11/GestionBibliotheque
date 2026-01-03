@@ -1,0 +1,92 @@
+﻿@page
+@model GestionBibliotheque.Pages.Admin.AjouterLivreModel
+@{
+}
+<h2 class="text-center mb-4">Ajouter un livre</h2>
+@* Affiche les erreurs globales *@
+@if (!String.IsNullOrEmpty(Model.MessageErr))
+{
+    <div class="alert alert-danger" style="text-align : center">
+        @Model.MessageErr
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+<form method="post" class="container" enctype="multipart/form-data">
+
+    <div class="row g-3">
+
+        <!-- TITRE -->
+        <div class="col-md-6">
+            <label class="form-label">Titre</label>
+            <input asp-for="Book.Titre" class="form-control" required/>
+        </div>
+
+        <!-- AUTEUR -->
+        <div class="col-md-6">
+            <label class="form-label">Auteur</label>
+            <select asp-for="Book.Id_auteur" class="form-select" required>
+                @foreach (var a in Model.Auteurs)
+                {
+                    <option value="@a.Id_auteur">
+                        @a.Prenom @a.Nom
+                    </option>
+                }
+            </select>
+        </div>
+
+        <!-- CATEGORIE -->
+        <div class="col-md-6">
+            <label class="form-label">Catégorie</label>
+            <select asp-for="Book.Id_categorie" class="form-select " required>
+                @foreach (var c in Model.Categories)
+                {
+                    <option value="@c.Id_categorie">
+                        @c.Nom
+                    </option>
+                }
+            </select>
+        </div>
+
+        <!-- DATE -->
+        <div class="col-md-6">
+            <label class="form-label">Date de publication</label>
+            <input asp-for="Book.DatePublication" type="date" class="form-control" required />
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div class="col-12">
+            <label class="form-label">Description</label>
+            <textarea asp-for="Book.Description" class="form-control" rows="3" required ></textarea>
+        </div>
+
+        <!-- NOMBRE DE PAGES -->
+        <div class="col-md-4">
+            <label class="form-label">Nombre de pages</label>
+            <input asp-for="Book.NombrePages" type="number" class="form-control" required />
+        </div>
+
+        <!-- IMAGE -->
+        <div class="col-md-4">
+            <label class="form-label">Image</label>
+            <input asp-for="Image" class="form-control" required />
+        </div>
+
+        <!-- EXEMPLAIRES -->
+        <div class="col-md-2">
+            <label class="form-label">Nb exemplaires</label>
+            <input asp-for="Book.NbExemplaires" type="number" class="form-control" required />
+        </div>
+
+    </div>
+
+    <div class="mt-4 text-center">
+        <button type="submit" class="btn btn-success">
+            Ajouter
+        </button>
+
+        <a asp-page="Livres" class="btn btn-secondary ms-2">
+            Annuler
+        </a>
+    </div>
+
+</form>

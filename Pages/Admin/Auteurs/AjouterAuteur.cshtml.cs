@@ -63,7 +63,7 @@ namespace GestionBibliotheque.Pages.Admin
             }
             Author.Photo = FileName; 
             AuteurService.addAuthor(Author);
-            return  RedirectToPage("/Admin/Auteurs" ) ; 
+            return  RedirectToPage("/Admin/Auteurs/Auteurs" ) ; 
         }
     }
 }

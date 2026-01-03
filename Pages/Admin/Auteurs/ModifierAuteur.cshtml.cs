@@ -104,7 +104,7 @@ namespace GestionBibliotheque.Pages.Admin
                 MessageErr = "Un problème est survenu lors de la modification de l'auteur.";
                 return Page();
             }
-            return RedirectToPage("/Admin/Auteurs");
+            return RedirectToPage("/Admin/Auteurs/Auteurs");
         }
     }
 }

@@ -66,11 +66,13 @@
             <input type="file" asp-for="Photo" class="form-control" />
         </div>
 
-        <button type="submit" class="btn btn-primary">
-           Modifier
-        </button>
-        <a asp-page="/Admin/Auteurs" class="btn btn-secondary ms-2">
-            Annuler
-        </a>
+        <div class="d-flex justify-content-between mt-4">
+            <button type="submit" class="btn btn-success">
+                Modifier
+            </button>
+            <a asp-page="Auteurs" class="btn btn-secondary">
+                Annuler
+            </a>
+        </div>
     </form>
 </div>

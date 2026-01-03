@@ -55,12 +55,13 @@
             <input type="file" asp-for="Photo" class="form-control" required/>
         </div>
 
-        <button type="submit" class="btn btn-primary">
-            Enregistrer
-        </button>
-
-        <a asp-page="/Admin/Auteurs" class="btn btn-secondary ms-2">
-            Annuler
-        </a>
+        <div class="d-flex justify-content-between mt-4">
+            <button type="submit" class="btn btn-success">
+               Ajouter
+            </button>
+            <a asp-page="Auteurs" class="btn btn-secondary">
+                Annuler
+            </a>
+        </div>
     </form>
 </div>

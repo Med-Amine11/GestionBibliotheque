@@ -46,7 +46,7 @@ namespace GestionBibliotheque.Pages.Admin
             }
             else { MessageSucc = "Utilisateur supprimé avec suucès."; }
            
-            return RedirectToPage("/Admin/Utilisateurs"); ;
+            return RedirectToPage("/Admin/Utilisateurs/Utilisateurs"); ;
         }
     }
 }

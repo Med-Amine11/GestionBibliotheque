@@ -65,7 +65,7 @@ namespace GestionBibliotheque.Pages.Admin
                 }
 
             }
-            return RedirectToPage("/Admin/Livres");
+            return RedirectToPage("/Admin/Livres/Livres");
         }
 
     }

@@ -56,7 +56,7 @@ namespace GestionBibliotheque.Pages.Admin
                     Console.WriteLine(ex.Message);
                 }
             }
-            return RedirectToPage("/Admin/Auteurs");
+            return RedirectToPage("/Admin/Auteurs/Auteurs");
         }
     }
 }

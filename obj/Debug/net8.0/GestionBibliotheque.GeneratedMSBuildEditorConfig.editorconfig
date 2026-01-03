@@ -18,52 +18,56 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\J.P.M\Desktop\GestionBibliotheque
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/AjouterAuteur.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWpvdXRlckF1dGV1ci5jc2h0bWw=
+[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/Auteurs/AjouterAuteur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQXV0ZXVyc1xBam91dGVyQXV0ZXVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/AjouterCategorie.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWpvdXRlckNhdGVnb3JpZS5jc2h0bWw=
+[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/Auteurs/Auteurs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQXV0ZXVyc1xBdXRldXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/AjouterLivre.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWpvdXRlckxpdnJlLmNzaHRtbA==
+[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/Auteurs/ModifierAuteur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQXV0ZXVyc1xNb2RpZmllckF1dGV1ci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/AjouterUtilisateur.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWpvdXRlclV0aWxpc2F0ZXVyLmNzaHRtbA==
+[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/Categories/AjouterCategorie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2F0ZWdvcmllc1xBam91dGVyQ2F0ZWdvcmllLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/Auteurs.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQXV0ZXVycy5jc2h0bWw=
+[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/Categories/Categories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2F0ZWdvcmllc1xDYXRlZ29yaWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/Categories.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2F0ZWdvcmllcy5jc2h0bWw=
+[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/Categories/ModifierCategorie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2F0ZWdvcmllc1xNb2RpZmllckNhdGVnb3JpZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/Emprunts.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRW1wcnVudHMuY3NodG1s
+[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/Emprunts/Emprunts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRW1wcnVudHNcRW1wcnVudHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/Livres.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTGl2cmVzLmNzaHRtbA==
+[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/Livres/AjouterLivre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTGl2cmVzXEFqb3V0ZXJMaXZyZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/ModifierAuteur.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTW9kaWZpZXJBdXRldXIuY3NodG1s
+[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/Livres/Livres.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTGl2cmVzXExpdnJlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/ModifierCategorie.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTW9kaWZpZXJDYXRlZ29yaWUuY3NodG1s
+[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/Livres/ModifierLivre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTGl2cmVzXE1vZGlmaWVyTGl2cmUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/ModifierUtilisateur.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTW9kaWZpZXJVdGlsaXNhdGV1ci5jc2h0bWw=
+[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/Utilisateurs/AjouterUtilisateur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXRpbGlzYXRldXJzXEFqb3V0ZXJVdGlsaXNhdGV1ci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/Utilisateurs.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXRpbGlzYXRldXJzLmNzaHRtbA==
+[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/Utilisateurs/ModifierUtilisateur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXRpbGlzYXRldXJzXE1vZGlmaWVyVXRpbGlzYXRldXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/Admin/Utilisateurs/Utilisateurs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXRpbGlzYXRldXJzXFV0aWxpc2F0ZXVycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/J.P.M/Desktop/GestionBibliotheque/Pages/login.cshtml]

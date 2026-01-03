@@ -1,8 +1,8 @@
 ﻿@page
-@model GestionBibliotheque.Pages.Admin.AjouterUtilisateurModel
+@model GestionBibliotheque.Pages.Admin.ModifierUtilisateurModel
 @{
 }
-<h1 style="text-align : center">Ajouter Utilisateur </h1>
+<h1 style="text-align : center">Modifier Utilisateur </h1>
 
 <div class="d-flex justify-content-center">
     <div class="card p-4 shadow" style="width: 700px;">
@@ -10,33 +10,33 @@
         @if (!String.IsNullOrEmpty(Model.MessageErr))
         {
             <div class="alert alert-danger">
-              @Model.MessageErr 
+                @Model.MessageErr
             </div>
         }
         <form method="post">
             <div class="form-group mb-3">
                 <label asp-for="NewUtilisateur.Nom"></label>
-                <input asp-for="NewUtilisateur.Nom" class="form-control" type="text"  required />
+                <input asp-for="NewUtilisateur.Nom" class="form-control" type="text" required />
             </div>
 
             <div class="form-group mb-3">
                 <label asp-for="NewUtilisateur.Prenom"></label>
-                <input asp-for="NewUtilisateur.Prenom" class="form-control" type="text"  required />
+                <input asp-for="NewUtilisateur.Prenom" class="form-control" type="text" required />
             </div>
 
             <div class="form-group mb-3">
                 <label asp-for="NewUtilisateur.Email"></label>
-                <input asp-for="NewUtilisateur.Email" class="form-control" type ="email" required />
+                <input asp-for="NewUtilisateur.Email" class="form-control" type="email" required />
             </div>
 
             <div class="form-group mb-3">
                 <label asp-for="NewUtilisateur.Password"></label>
-                <input asp-for="NewUtilisateur.Password" class="form-control" type="text"  required />
+                <input asp-for="NewUtilisateur.Password" class="form-control" type="text" required />
             </div>
 
             <div class="form-group mb-3">
                 <label asp-for="NewUtilisateur.Cin"></label>
-                <input asp-for="NewUtilisateur.Cin" class="form-control" type="text"  required />
+                <input asp-for="NewUtilisateur.Cin" class="form-control" type="text" required />
             </div>
 
             <div class="form-group mb-3">
@@ -46,15 +46,25 @@
 
             <div class="form-group mb-3">
                 <label asp-for="NewUtilisateur.Adresse"></label>
-                <input asp-for="NewUtilisateur.Adresse" class="form-control" type ="text" required />
+                <input asp-for="NewUtilisateur.Adresse" class="form-control" type="text" required />
             </div>
 
             <div class="form-group mb-3">
                 <label asp-for="NewUtilisateur.Date_Naissance"></label>
                 <input asp-for="NewUtilisateur.Date_Naissance" class="form-control" type="date" required />
-             </div>
-
-            <button type="submit" class="btn btn-success w-100 mt-2">Ajouter</button>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="NewUtilisateur.Actif"></label>
+                <input asp-for="NewUtilisateur.Actif" class="form-control" type="text" required />
+            </div>
+            <div class="d-flex justify-content-between mt-4">
+                <button type="submit" class="btn btn-success">
+                    Modifier
+                </button>
+                <a asp-page="Utilisateurs" class="btn btn-secondary">
+                    Annuler
+                </a>
+            </div>
         </form>
     </div>
 </div>

@@ -149,5 +149,88 @@ namespace GestionBibliotheque.Pages.Services
             }
             return image;
         }
+
+    public static int AddBook(Livre livre)
+        {
+            int count = 0;
+            try
+            {
+                OpenConnection();
+                String sql = @"INSERT INTO Livre
+                        (
+                            id_auteur,
+                            id_categorie,
+                            titre,
+                            description,
+                            date_publication,
+                            nombre_pages,
+                            image,
+                            nb_exemplaires,
+                            nb_disponibles
+                        )
+                        VALUES
+                        (
+                            @Id_auteur,
+                            @Id_categorie,
+                            @Titre,
+                            @Description,
+                            @Date_publication,
+                            @Nombre_pages,
+                            @Image,
+                            @Nb_exemplaires,
+                            @Nb_disponibles
+                        )"; 
+                using(SqlCommand cmd = new SqlCommand(sql , con))
+                {
+                    cmd.Parameters.AddWithValue("@Id_auteur", livre.Id_auteur);
+                    cmd.Parameters.AddWithValue("@Id_categorie", livre.Id_categorie);
+                    cmd.Parameters.AddWithValue("@Titre", livre.Titre);
+                    cmd.Parameters.AddWithValue("@Description", livre.Description);
+                    cmd.Parameters.AddWithValue("@Date_publication", livre.DatePublication);
+                    cmd.Parameters.AddWithValue("@Nombre_pages", livre.NombrePages);
+                    cmd.Parameters.AddWithValue("@Image", livre.Image);
+                    cmd.Parameters.AddWithValue("@Nb_exemplaires", livre.NbExemplaires);
+                    cmd.Parameters.AddWithValue("@Nb_disponibles", livre.NbDisponibles);
+
+                    count = cmd.ExecuteNonQuery();
+
+                }
+            }
+            catch (SqlException ex )
+            {
+               Console.WriteLine (ex.Message);
+            }
+            finally
+            {
+                con.Close(); 
+            }
+
+            return count;
+        }
+
+        public static int CountBooksByTitle(string title)
+        {
+            int count = 0;
+            try
+            {
+                OpenConnection();
+                String sql = @"select count(*) from livre where titre = @Title"; 
+                using(SqlCommand cmd = new SqlCommand(sql , con))
+                {
+                    cmd.Parameters.AddWithValue("@Title", title); 
+
+                    count = (int) cmd.ExecuteScalar();
+                }
+            }catch(SqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close ();
+            }
+
+            return count; 
+        }
     }
 }

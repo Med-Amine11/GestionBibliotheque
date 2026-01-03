@@ -11,6 +11,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Pages\Admin\Categories\" />
+    <Folder Include="Pages\Admin\Emprunts\" />
+    <Folder Include="Pages\Admin\Auteurs\" />
+    <Folder Include="Pages\Admin\Livres\" />
+    <Folder Include="Pages\Admin\Utilisateurs\" />
     <Folder Include="wwwroot\images\auteurs\" />
     <Folder Include="wwwroot\images\categories\" />
   </ItemGroup>

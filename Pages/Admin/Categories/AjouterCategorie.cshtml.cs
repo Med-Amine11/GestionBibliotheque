@@ -57,7 +57,7 @@ namespace GestionBibliotheque.Pages.Admin
             {
                 Image.CopyTo(stream);
             }
-            return RedirectToPage("/Admin/Categories"); 
+            return RedirectToPage("/Admin/Categories/Categories"); 
 
         }
 

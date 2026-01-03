@@ -24,10 +24,7 @@ namespace GestionBibliotheque.Pages.Admin
             {
                 return RedirectToPage("/login"); 
             }
-            if (Id == 0)
-            {
-                return RedirectToPage("/Admin/Categories");
-            }
+
             Categorie = CategorieService.GetCategorieById(id);
             return Page(); 
         }
@@ -80,7 +77,7 @@ namespace GestionBibliotheque.Pages.Admin
                 MessageErr = "Un problème est survenu lord de la modification de la catégorie";
                 return Page();
             }
-            return RedirectToPage("/Admin/Categories");
+            return RedirectToPage("/Admin/Categories/Categories");
         }
     }
 }

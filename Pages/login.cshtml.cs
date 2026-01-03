@@ -47,7 +47,7 @@ namespace GestionBibliotheque.Pages
                 // Vérification rôle
                 if (utilisateur.Role == "admin")
 				{
-					return RedirectToPage("/Admin/Utilisateurs");
+					return RedirectToPage("/Admin/Utilisateurs/Utilisateurs");
 				}
 				else // utilisateur normal
 				{
