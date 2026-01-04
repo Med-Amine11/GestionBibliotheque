@@ -2,3 +2,119 @@
 @model GestionBibliotheque.Pages.Admin.ModifierLivreModel
 @{
 }
+<h2 class="text-center mb-4">Modifier un livre</h2>
+@* Affiche les erreurs globales *@
+@if (!String.IsNullOrEmpty(Model.MessageErr))
+{
+    <div class="alert alert-danger" style="text-align : center">
+        @Model.MessageErr
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+<form method="post" class="container" enctype="multipart/form-data" id="editForm">
+
+    <div class="row g-3">
+
+        <!-- ID-->
+        <input asp-for="Book.Id_livre"  hidden/>
+ 
+        <!-- TITRE -->
+        <div class="col-md-6">
+            <label class="form-label">Titre</label>
+            <input asp-for="Book.Titre" class="form-control" />
+        </div>
+
+        <!-- AUTEUR -->
+        <div class="col-md-6">
+            <label class="form-label">Auteur</label>
+            <select asp-for="Book.Id_auteur" class="form-select" >
+                @foreach (var a in Model.Auteurs)
+                {
+                    if(a.Id_auteur == Model.Book.Id_auteur)
+                    {
+                        <option value="@a.Id_auteur" selected>
+                            @a.Prenom @a.Nom
+                        </option>
+                    }else{
+                    <option value="@a.Id_auteur" >
+                        @a.Prenom @a.Nom
+                    </option>
+                }
+                }
+            </select>
+        </div>
+
+        <!-- CATEGORIE -->
+        <div class="col-md-6">
+            <label class="form-label">Catégorie</label>
+            <select asp-for="Book.Id_categorie" class="form-select " >
+                @foreach (var c in Model.Categories)
+                {
+                    if (c.Id_categorie == Model.Book.Id_categorie)
+                    {
+                        <option value="@c.Id_categorie" selected >
+                            @c.Nom
+                        </option>
+                    }
+                    else{
+                    <option value="@c.Id_categorie">
+                        @c.Nom
+                    </option>
+                    }
+                }
+            </select>
+        </div>
+
+        <!-- DATE -->
+        <div class="col-md-6">
+            <label class="form-label">Date de publication</label>
+            <input asp-for="Book.DatePublication" type="date" class="form-control"  />
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div class="col-12">
+            <label class="form-label">Description</label>
+            <textarea asp-for="Book.Description" class="form-control" rows="3"  ></textarea>
+        </div>
+
+        <!-- NOMBRE DE PAGES -->
+        <div class="col-md-4">
+            <label class="form-label">Nombre de pages</label>
+            <input asp-for="Book.NombrePages" type="number" class="form-control"  />
+        </div>
+
+        <!-- IMAGE -->
+        <div class="col-md-4">
+            <label class="form-label">Image</label>
+            <input asp-for="Image" class="form-control" id="Image" />
+        </div>
+
+        <!-- EXEMPLAIRES -->
+        <div class="col-md-2">
+            <label class="form-label">Nb exemplaires</label>
+            <input asp-for="Book.NbExemplaires" type="number" class="form-control" />
+        </div>
+
+
+        <!-- DISPONIBLES -->
+        <div class="col-md-2">
+            <label class="form-label">Nb disponibles</label>
+            <input asp-for="Book.NbDisponibles" type="number" class="form-control" />
+        </div>
+
+
+    </div>
+
+    <div class="mt-4 text-center">
+        <button type="submit" class="btn btn-success" id="submitBtn" disabled>
+            Modifier
+        </button>
+
+        <a asp-page="Livres" class="btn btn-secondary ms-2">
+            Annuler
+        </a>
+    </div>
+
+</form>
+
+<script src="~/js/site.js"> </script>

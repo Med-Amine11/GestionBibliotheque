@@ -232,5 +232,175 @@ namespace GestionBibliotheque.Pages.Services
 
             return count; 
         }
+
+        public static Livre GetBookById(int id)
+        {
+            Livre livre = null ;
+            try
+            {
+                OpenConnection();
+                String sql = @"select c.id_categorie , c.nom, a.id_auteur , a.nom , a.prenom , li.titre , 
+                                li.description , li.date_publication , li.nombre_pages , li.image , li.nb_exemplaires , li.nb_disponibles 
+                                from livre li join auteur a on  li.id_auteur = a.id_auteur 
+                                join categorie c on c.id_categorie = li.id_categorie where id_livre = @Id"; 
+                using(SqlCommand cmd = new SqlCommand(sql , con))
+                {
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            livre = new Livre(
+                                id,                     // id_livre
+                                reader.GetString(5),    // titre
+                                reader.GetString(6),    // description
+                                reader.GetDateTime(7),  // date_publication
+                                reader.GetInt32(8),     // nombre_pages
+                                reader.GetString(9),    // image
+                                reader.GetInt32(10),    // nb_exemplaires
+                                reader.GetInt32(11),    // nb_disponibles
+                                reader.GetInt32(2),     // id_auteur
+                                reader.GetString(3),    // nom auteur
+                                reader.GetString(4),    // prenom auteur
+                                reader.GetInt32(0),     // id_categorie
+                                reader.GetString(1)     // nom categorie
+                                          );
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return livre;
+        }
+
+        public static int CountBooksSameTitleDifferentId(String title , int id)
+        {
+            int count = 0;
+            try
+            {
+                OpenConnection();
+                String sql = "select count(*) from livre where titre = @Titre and id_livre != @Id";
+                using (SqlCommand cmd = new SqlCommand(sql , con))
+                {
+                    cmd.Parameters.AddWithValue("@Titre" , title);
+                    cmd.Parameters.AddWithValue("@Id", id); 
+
+                    count = (int) cmd.ExecuteScalar();
+                }
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine(ex.Message); 
+            }
+            finally
+            {
+                con.Close(); 
+            }
+            return count; 
+        }
+
+        public static int CountEmpruntEncoursPerBook(int id)
+        {
+            int count = 0;
+            try
+            {
+                OpenConnection ();
+                String sql = "select count(*) from emprunt where statut != 'termine' and id_livre = @Id"; 
+                using(SqlCommand cmd = new SqlCommand(sql, con))
+                {
+                    cmd.Parameters.AddWithValue("@Id" , id);    
+
+                    count = (int)(cmd.ExecuteScalar());
+                }
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine (ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return count; 
+        }
+
+        public static int GetNbDisponiblesById(int id)
+        {
+            int count = 0;
+            try
+            {
+                OpenConnection();
+                String sql = "select nb_disponibles from livre where id_livre = @Id"; 
+                using(SqlCommand cmd = new SqlCommand(sql, con))
+                {
+                    cmd.Parameters.AddWithValue("@Id" , id );
+                    count = (int)(cmd.ExecuteScalar());
+                }
+            }catch(SqlException ex)
+            {
+                Console.WriteLine(ex.Message); 
+            }
+            finally
+            {
+                con.Close ();
+            }
+            return count; 
+        }
+
+        public static int UpdateBook(Livre livre)
+        {
+            int lignesAffectees = 0;
+
+            try
+            {
+                OpenConnection(); 
+                string sql = @"UPDATE livre 
+                       SET 
+                           id_auteur = @Id_auteur,
+                           id_categorie = @Id_categorie,
+                           titre = @Titre,
+                           description = @Description,
+                           date_publication = @Date_publication,
+                           nb_disponibles = @Nb_disponibles,
+                           nb_exemplaires = @Nb_exemplaires,
+                           nombre_pages = @Nombre_pages,
+                           image = @Image
+                       WHERE id_livre = @Id_livre";
+
+                using (SqlCommand cmd = new SqlCommand(sql, con))
+                {
+                    cmd.Parameters.AddWithValue("@Id_livre", livre.Id_livre);
+                    cmd.Parameters.AddWithValue("@Id_auteur", livre.Id_auteur);
+                    cmd.Parameters.AddWithValue("@Id_categorie", livre.Id_categorie);
+                    cmd.Parameters.AddWithValue("@Titre", livre.Titre);
+                    cmd.Parameters.AddWithValue("@Description", livre.Description);
+                    cmd.Parameters.AddWithValue("@Date_publication", livre.DatePublication);
+                    cmd.Parameters.AddWithValue("@Nb_disponibles", livre.NbDisponibles);
+                    cmd.Parameters.AddWithValue("@Nb_exemplaires", livre.NbExemplaires);
+                    cmd.Parameters.AddWithValue("@Nombre_pages", livre.NombrePages);
+                    cmd.Parameters.AddWithValue("@Image", livre.Image);
+
+                    lignesAffectees = cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erreur lors de la mise à jour du livre : " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+            return lignesAffectees;
+        }
+
     }
 }

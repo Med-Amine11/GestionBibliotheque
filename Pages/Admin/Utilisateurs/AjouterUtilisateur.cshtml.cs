@@ -12,22 +12,24 @@ namespace GestionBibliotheque.Pages.Admin
         public Utilisateur NewUtilisateur { get; set; }
         public String MessageErr { get; set; }
 
-        public AjouterUtilisateurModel()
-        {
-            MessageErr = ""; 
-            NewUtilisateur = new Utilisateur();
-        }
         public IActionResult OnGet()
         {
             if (String.IsNullOrEmpty(HttpContext.Session.GetString("User_id")))
             {
                 return RedirectToPage("/login");
             }
+            MessageErr = "";
             return Page(); 
         }
         public IActionResult OnPost()
         {
-            if(UtilisateurService.CountUsersByNomPrenom( NewUtilisateur.Nom , NewUtilisateur.Prenom) == 1)
+
+            if (String.IsNullOrEmpty(HttpContext.Session.GetString("User_id")))
+            {
+                return RedirectToPage("/login");
+
+            }
+            if (UtilisateurService.CountUsersByNomPrenom( NewUtilisateur.Nom , NewUtilisateur.Prenom) == 1)
             {
                 MessageErr = "Un utilisateur avec ce nom et prénom existe déjà.";
                 return Page(); 

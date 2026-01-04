@@ -32,6 +32,11 @@ namespace GestionBibliotheque.Pages.Admin
         }
         public IActionResult OnPost()
         {
+            if (String.IsNullOrEmpty(HttpContext.Session.GetString("User_id")))
+            {
+                return RedirectToPage("/login");
+
+            }
             if (CategorieService.CountCategoryByName(Categorie.Nom) > 0)
             {
                 MessageErr = "Une autre catégorie existe avec le meme nom.";

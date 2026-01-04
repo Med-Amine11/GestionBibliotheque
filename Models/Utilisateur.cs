@@ -24,7 +24,7 @@
 		public Boolean Actif {  get; set; }
 		public Utilisateur()
 		{
-
+			Date_Naissance = DateTime.Now;
 		}
 
 		public Utilisateur(int id_utilisateur, string nom, string prenom, string email, string password, string role, string cin, string telephone, string adresse, DateTime date_Naissance, bool actif)

@@ -14,8 +14,13 @@ namespace GestionBibliotheque.Pages.Admin
 
         public LivresModel(IWebHostEnvironment env)
         {
-            Livres = LivreService.getAllBooks();
+
             _env = env;
+
+        }
+        private void LoadData()
+        {
+            Livres = LivreService.getAllBooks();
         }
         public IActionResult OnGet()
         {
@@ -23,6 +28,7 @@ namespace GestionBibliotheque.Pages.Admin
             {
                 return RedirectToPage("/login");
             }
+            LoadData();
             return Page();
 
         }
@@ -34,6 +40,7 @@ namespace GestionBibliotheque.Pages.Admin
                 return RedirectToPage("/login");
             }
 
+            LoadData();
             if (LivreService.CountEmpruntPerBook(id) > 0)
             {
                 MessageErr = "Le livre ne peut pas etre supprimé, il est associé à un ou plusieurs emprunt(s).";
@@ -65,7 +72,7 @@ namespace GestionBibliotheque.Pages.Admin
                 }
 
             }
-            return RedirectToPage("/Admin/Livres/Livres");
+            return RedirectToPage();
         }
 
     }

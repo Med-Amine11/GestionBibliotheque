@@ -492,7 +492,7 @@ namespace GestionBibliotheque.Services
             {
                 OpenConnection();
 
-                string Sql = @"SELECT nom, prenom, email, password, cin, telephone, adresse, date_naissance, actif
+                string Sql = @"SELECT nom, prenom, email, password,role, cin, telephone, adresse, date_naissance, actif
                        FROM utilisateur
                        WHERE id_utilisateur = @id";
 
@@ -502,19 +502,24 @@ namespace GestionBibliotheque.Services
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                       utilisateur = new Utilisateur();
+                       
                         if (reader.Read())
                         {
-                            utilisateur.Id_utilisateur = id;
-                            utilisateur.Nom = reader.GetString(0);
-                            utilisateur.Prenom = reader.GetString(1);
-                            utilisateur.Email = reader.GetString(2);
-                            utilisateur.Password = reader.GetString(3);
-                            utilisateur.Cin = reader.GetString(4);
-                            utilisateur.Telephone = reader.GetString(5);
-                            utilisateur.Adresse = reader.GetString(6);
-                            utilisateur.Date_Naissance = reader.GetDateTime(7);
-                            utilisateur.Actif = reader.GetBoolean(8);
+                            utilisateur = new Utilisateur(
+                                            id,                                           // id_utilisateur
+                                            reader.GetString(0),                          // nom
+                                            reader.GetString(1),                          // prenom
+                                            reader.GetString(2),                          // email
+                                            reader.GetString(3),                          // password
+                                            reader.GetString(4),                          // role
+                                            reader.GetString(5),                          // cin
+                                            reader.GetString(6),                          // telephone
+                                            reader.GetString(7) ,                         // adresse
+                                            reader.GetDateTime(8),                        // date_naissance
+                                            reader.GetBoolean(9)                          // actif
+                                        );
+
+
                         }
                     }
                 }
@@ -530,6 +535,34 @@ namespace GestionBibliotheque.Services
             }
 
             return utilisateur;
+        }
+
+        public static int CountUsersSameNameDifferentId(String nom , String prenom , int id)
+        {
+            int count = 0;
+
+            try
+            {
+                OpenConnection();
+                String sql = @"select count(*) from utilisateur where nom = @Nom and prenom = @Prenom and id_utilisateur != @Id";
+                using (SqlCommand cmd = new SqlCommand(sql, con))
+                {
+                    cmd.Parameters.AddWithValue("@Nom" , nom  );
+                    cmd.Parameters.AddWithValue("@Prenom" , prenom  );
+                    cmd.Parameters.AddWithValue("@Id" , id  );
+
+                    count = (int)cmd.ExecuteScalar();
+                }
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine (ex.Message);
+            }
+            finally
+            {con.Close();
+
+            }
+            return count; 
         }
 
     }

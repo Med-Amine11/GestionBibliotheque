@@ -13,9 +13,12 @@ namespace GestionBibliotheque.Pages.Admin
         public IWebHostEnvironment _env;
         public CategoriesModel(IWebHostEnvironment env)
         {
-            categories = CategorieService.getAllCategories();
             _env = env;
-            MessageErr = "";
+        }
+         private void LoadData()
+        {
+            categories = CategorieService.getAllCategories();
+
         }
         public IActionResult OnGet()
         {
@@ -23,6 +26,7 @@ namespace GestionBibliotheque.Pages.Admin
             {
                 return RedirectToPage("/login");
             }
+            LoadData();
             return Page(); 
         }
 
@@ -32,7 +36,8 @@ namespace GestionBibliotheque.Pages.Admin
                 return RedirectToPage("/login");
             }
 
-            if (CategorieService.CheckIdCategoryInLivres(id))
+            LoadData();
+            if (CategorieService.CheckIdCategoryInLivres(id) > 0)
             {
                 MessageErr = "Cette categorie ne peut pas etre supprime, elle est liée à un seul ou plusieurs livre(s).";
                 return Page();
@@ -57,7 +62,7 @@ namespace GestionBibliotheque.Pages.Admin
                     Console.WriteLine(ex.Message);
                 }
             }
-            return RedirectToPage("/Admin/Categories/Categories");
+            return RedirectToPage();
         }
 
 

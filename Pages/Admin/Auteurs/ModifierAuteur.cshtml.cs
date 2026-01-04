@@ -30,6 +30,10 @@ namespace GestionBibliotheque.Pages.Admin
                 return RedirectToPage("/login"); 
             }
             Author = AuteurService.GetAuthorById(Id);
+            if (Author == null)
+            {
+                return NotFound();  
+            }
             return Page(); 
 
         }
@@ -40,7 +44,7 @@ namespace GestionBibliotheque.Pages.Admin
             {
                 return RedirectToPage("/login");
             }
-            if (AuteurService.CountAuthorsByNomPrenom(Author.Nom, Author.Prenom) > 1 )
+            if (AuteurService.CountAuthorsSameNameDifferentId(Author.Nom,Author.Prenom,Id) > 0 )
             {
                 MessageErr = "Un autre auteur existe avec le meme nom et prénom.";
                 return Page();

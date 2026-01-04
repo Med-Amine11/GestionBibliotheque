@@ -22,8 +22,6 @@ namespace GestionBibliotheque.Pages.Admin
         public AjouterLivreModel(IWebHostEnvironment env)
         {
             _env = env; 
-            Categories = CategorieService.getAllCategories();
-            Auteurs = AuteurService.getAllAuthors();
         }
         public IActionResult OnGet()
         {
@@ -31,6 +29,8 @@ namespace GestionBibliotheque.Pages.Admin
             {
                 return RedirectToPage("/login");
             }
+            Categories = CategorieService.getAllCategories();
+            Auteurs = AuteurService.getAllAuthors();
             return Page(); 
         }
 

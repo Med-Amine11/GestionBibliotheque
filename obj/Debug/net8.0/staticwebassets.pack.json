@@ -9,32 +9,8 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\images\\auteurs\\0c23183c-5a8a-4678-9e51-0367713e6484.jpg",
-      "PackagePath": "staticwebassets\\images\\auteurs\\0c23183c-5a8a-4678-9e51-0367713e6484.jpg"
-    },
-    {
-      "Id": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\images\\auteurs\\c2a524f2-02fe-464b-9135-94ce7019a3bc.jpg",
-      "PackagePath": "staticwebassets\\images\\auteurs\\c2a524f2-02fe-464b-9135-94ce7019a3bc.jpg"
-    },
-    {
-      "Id": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\images\\categories\\18e7519b-e21f-4286-ab02-a2de5e8e2fda.jpg",
-      "PackagePath": "staticwebassets\\images\\categories\\18e7519b-e21f-4286-ab02-a2de5e8e2fda.jpg"
-    },
-    {
-      "Id": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\images\\categories\\222ea074-07f9-4ea9-9b7b-48debec990b3.jpg",
-      "PackagePath": "staticwebassets\\images\\categories\\222ea074-07f9-4ea9-9b7b-48debec990b3.jpg"
-    },
-    {
-      "Id": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\images\\livres\\00ac5661-6e78-4099-ba8a-0ba2080d8cb2.jpg",
-      "PackagePath": "staticwebassets\\images\\livres\\00ac5661-6e78-4099-ba8a-0ba2080d8cb2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\images\\livres\\4bcc8568-18f1-4286-917e-0c3e4129b857.jpg",
-      "PackagePath": "staticwebassets\\images\\livres\\4bcc8568-18f1-4286-917e-0c3e4129b857.jpg"
-    },
-    {
-      "Id": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\images\\livres\\image.jpg",
-      "PackagePath": "staticwebassets\\images\\livres\\image.jpg"
+      "Id": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\images\\categories\\8ba3a80f-29f6-4161-bfe2-b03f5fa71844.jpg",
+      "PackagePath": "staticwebassets\\images\\categories\\8ba3a80f-29f6-4161-bfe2-b03f5fa71844.jpg"
     },
     {
       "Id": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\js\\site.js",

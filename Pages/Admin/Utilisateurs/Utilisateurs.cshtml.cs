@@ -12,9 +12,10 @@ namespace GestionBibliotheque.Pages.Admin
 		public List<Utilisateur> Utilisateurs { get; set; }
         public String MessageErr { get; set; }
         public String MessageSucc { get; set; }
-        public UtilisateursModel()
+
+        private void LoadData()
         {
-            Utilisateurs = Utilisateurs = UtilisateurService.GetAllUsers();
+            Utilisateurs = UtilisateurService.GetAllUsers();
 
         }
         public IActionResult OnGet()
@@ -23,6 +24,7 @@ namespace GestionBibliotheque.Pages.Admin
             {
                 return RedirectToPage("/login");
             }
+            LoadData();
             return Page(); 
         }
 
@@ -32,7 +34,7 @@ namespace GestionBibliotheque.Pages.Admin
             {
                 return RedirectToPage("/login");
             }
-
+            LoadData() ;
             if (UtilisateurService.CheckUserInEmprunt(id) > 0)
             {
                 MessageErr = "L'utilisateur a des emprunts ne peut pas etre supprimé.";
@@ -46,7 +48,7 @@ namespace GestionBibliotheque.Pages.Admin
             }
             else { MessageSucc = "Utilisateur supprimé avec suucès."; }
            
-            return RedirectToPage("/Admin/Utilisateurs/Utilisateurs"); ;
+            return RedirectToPage() ;
         }
     }
 }

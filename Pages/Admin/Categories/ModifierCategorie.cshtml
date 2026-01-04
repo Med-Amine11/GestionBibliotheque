@@ -14,7 +14,7 @@
     }
 
     <div class="mx-auto p-4" style="max-width: 500px;">
-        <form method="post" enctype="multipart/form-data">
+        <form method="post" enctype="multipart/form-data" id="editForm">
 
             <input asp-for="Categorie.Id_categorie" hidden/>
 
@@ -38,12 +38,12 @@
                         <img src="~/Images/categories/@Model.Categorie.Image" class="img-fluid img-thumbnail" style="max-height: 180px;" />
                     </div>
 
-                <input type="file" asp-for="UploadedImage" class="form-control" />
+                <input type="file" asp-for="UploadedImage" class="form-control" id="Image" />
             </div>
 
             <!-- Boutons -->
             <div class="d-flex justify-content-between mt-4">
-                <button type="submit" class="btn btn-success">
+                <button type="submit" class="btn btn-success"  id="submitBtn" disabled >
                     Modifier
                 </button>
                 <a asp-page="Categories" class="btn btn-secondary">
@@ -56,3 +56,4 @@
 </div>
 
 
+<script src="~/js/site.js"> </script>

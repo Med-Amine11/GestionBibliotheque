@@ -26,12 +26,22 @@ namespace GestionBibliotheque.Pages.Admin
             }
 
             Categorie = CategorieService.GetCategorieById(id);
+            if(Categorie == null)
+            {
+                return NotFound();
+            }
             return Page(); 
         }
         public IActionResult  OnPost()
         {
+            if (String.IsNullOrEmpty(HttpContext.Session.GetString("User_id")))
+            {
+                return RedirectToPage("/login");
+            }
+
             Categorie.Image = CategorieService.GetcategoryImageById(Categorie.Id_categorie);
-            if(CategorieService.CountCategoryByName(Categorie.Nom) > 1)
+
+            if(CategorieService.CountCategoriesSameNameDifferentId(Categorie.Nom , Id) > 0 ) 
             {
                 MessageErr = "Elle existe une autre catégorie avec le meme nom.";
                 return Page();

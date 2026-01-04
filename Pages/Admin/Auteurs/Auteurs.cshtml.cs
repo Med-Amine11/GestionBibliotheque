@@ -13,7 +13,12 @@ namespace GestionBibliotheque.Pages.Admin
         public AuteursModel(IWebHostEnvironment env)
         {
             _env = env;
+           
+        }
+        private void LoadData()
+        {
             Auteurs = AuteurService.getAllAuthors();
+
         }
         public IActionResult OnGet()
         {
@@ -21,6 +26,8 @@ namespace GestionBibliotheque.Pages.Admin
             {
                 return RedirectToPage("/login");
             }
+
+            LoadData();
             return Page(); 
         }
 
@@ -30,6 +37,7 @@ namespace GestionBibliotheque.Pages.Admin
             {
                 return RedirectToPage("/login");
             }
+            LoadData(); 
             if (AuteurService.CheckAuthorInBooks(id) > 0)
             {
                 MessageErr = "L'auteur ne peut pas etre supprimé, il est lié à un ou plusieurs livres.";
@@ -56,7 +64,7 @@ namespace GestionBibliotheque.Pages.Admin
                     Console.WriteLine(ex.Message);
                 }
             }
-            return RedirectToPage("/Admin/Auteurs/Auteurs");
+            return RedirectToPage();
         }
     }
 }

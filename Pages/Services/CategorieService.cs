@@ -125,13 +125,13 @@ namespace GestionBibliotheque.Pages.Services
             return ligne; 
         }
 
-        public static Boolean CheckIdCategoryInLivres(int id)
+        public static int CheckIdCategoryInLivres(int id)
         {
             int ligne = 0;
             try
             {
                 OpenConnection ();
-                String sql = "select count(id_livre) from livre where id_categorie = @Id";
+                String sql = "select count(*) from livre where id_categorie = @Id";
                 using (SqlCommand cmd = new SqlCommand(sql , con))
                 {
                     cmd.Parameters.AddWithValue("@Id", id);
@@ -147,7 +147,7 @@ namespace GestionBibliotheque.Pages.Services
                 con.Close();
             }
 
-            return ligne > 0;
+            return ligne ;
         }
 
         public static String GetcategoryImageById(int id)
@@ -181,11 +181,11 @@ namespace GestionBibliotheque.Pages.Services
 
         public static Categorie GetCategorieById(int id)
         {
-            Categorie categorie = new Categorie(); 
+            Categorie categorie = null ; 
             try
             {
                 OpenConnection();
-                String sql = "select id_categorie , nom , photo , description from categorie where id_categorie = @Id";
+                String sql = "select  nom , photo , description from categorie where id_categorie = @Id";
                 using (SqlCommand cmd = new SqlCommand(sql , con))
                 {
                     cmd.Parameters.AddWithValue("@Id", id);
@@ -193,10 +193,7 @@ namespace GestionBibliotheque.Pages.Services
                     {
                         if (reader.Read())
                         {
-                            categorie.Id_categorie = reader.GetInt32(0);
-                            categorie.Nom = reader.GetString(1);
-                            categorie.Image = reader.GetString(2);
-                            categorie.Description  = reader.GetString(3);
+                            categorie = new Categorie(id , reader.GetString(0) , reader.GetString(2) , reader.GetString(1));
                         }
                     }
                 }
@@ -238,6 +235,31 @@ namespace GestionBibliotheque.Pages.Services
             finally
             {
                 con.Close();
+            }
+            return ligne;
+        }
+
+        public static int CountCategoriesSameNameDifferentId(String nom , int id)
+        {
+            int ligne = 0;
+            try
+            {
+                OpenConnection();
+                String sql = "select count(*) from categorie where nom = @Nom and id_categorie != @Id";
+                using (SqlCommand cmd = new SqlCommand(sql, con))
+                {
+                    cmd.Parameters.AddWithValue("@Nom", nom);
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    ligne = (int)cmd.ExecuteScalar();   
+                }
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close(); 
             }
             return ligne;
         }

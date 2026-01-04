@@ -1,12 +1,258 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|c:\\users\\j.p.m\\desktop\\gestionbibliotheque\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|c:\\users\\j.p.m\\desktop\\gestionbibliotheque\\pages\\admin\\livres\\modifierlivre.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|solutionrelative:pages\\admin\\livres\\modifierlivre.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|c:\\users\\j.p.m\\desktop\\gestionbibliotheque\\pages\\admin\\utilisateurs\\modifierutilisateur.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|solutionrelative:pages\\admin\\utilisateurs\\modifierutilisateur.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|c:\\users\\j.p.m\\desktop\\gestionbibliotheque\\pages\\admin\\auteurs\\modifierauteur.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|solutionrelative:pages\\admin\\auteurs\\modifierauteur.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|c:\\users\\j.p.m\\desktop\\gestionbibliotheque\\pages\\admin\\categories\\modifiercategorie.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|solutionrelative:pages\\admin\\categories\\modifiercategorie.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|c:\\users\\j.p.m\\desktop\\gestionbibliotheque\\pages\\admin\\utilisateurs\\modifierutilisateur.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|solutionrelative:pages\\admin\\utilisateurs\\modifierutilisateur.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|c:\\users\\j.p.m\\desktop\\gestionbibliotheque\\pages\\admin\\livres\\modifierlivre.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|solutionrelative:pages\\admin\\livres\\modifierlivre.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|c:\\users\\j.p.m\\desktop\\gestionbibliotheque\\pages\\admin\\auteurs\\ajouterauteur.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|solutionrelative:pages\\admin\\auteurs\\ajouterauteur.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|c:\\users\\j.p.m\\desktop\\gestionbibliotheque\\pages\\admin\\auteurs\\modifierauteur.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|solutionrelative:pages\\admin\\auteurs\\modifierauteur.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|c:\\users\\j.p.m\\desktop\\gestionbibliotheque\\pages\\admin\\auteurs\\auteurs.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|solutionrelative:pages\\admin\\auteurs\\auteurs.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|c:\\users\\j.p.m\\desktop\\gestionbibliotheque\\pages\\admin\\categories\\modifiercategorie.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|solutionrelative:pages\\admin\\categories\\modifiercategorie.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|c:\\users\\j.p.m\\desktop\\gestionbibliotheque\\pages\\admin\\categories\\ajoutercategorie.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|solutionrelative:pages\\admin\\categories\\ajoutercategorie.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|c:\\users\\j.p.m\\desktop\\gestionbibliotheque\\pages\\admin\\utilisateurs\\ajouterutilisateur.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|solutionrelative:pages\\admin\\utilisateurs\\ajouterutilisateur.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|c:\\users\\j.p.m\\desktop\\gestionbibliotheque\\pages\\admin\\categories\\categories.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDA3B8D-BFD6-4CB1-ADD5-4B78989E93AE}|GestionBibliotheque.csproj|solutionrelative:pages\\admin\\categories\\categories.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ModifierCategorie.cshtml",
+              "DocumentMoniker": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Categories\\ModifierCategorie.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Categories\\ModifierCategorie.cshtml",
+              "ToolTip": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Categories\\ModifierCategorie.cshtml",
+              "RelativeToolTip": "Pages\\Admin\\Categories\\ModifierCategorie.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAnwCgAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-04T04:55:28.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ModifierAuteur.cshtml",
+              "DocumentMoniker": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Auteurs\\ModifierAuteur.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Auteurs\\ModifierAuteur.cshtml",
+              "ToolTip": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Auteurs\\ModifierAuteur.cshtml",
+              "RelativeToolTip": "Pages\\Admin\\Auteurs\\ModifierAuteur.cshtml",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAnwEEAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-04T04:54:36.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-01-04T04:40:23.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ModifierUtilisateur.cshtml",
+              "DocumentMoniker": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Utilisateurs\\ModifierUtilisateur.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Utilisateurs\\ModifierUtilisateur.cshtml",
+              "ToolTip": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Utilisateurs\\ModifierUtilisateur.cshtml",
+              "RelativeToolTip": "Pages\\Admin\\Utilisateurs\\ModifierUtilisateur.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAnwDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-04T04:17:42.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ModifierLivre.cshtml",
+              "DocumentMoniker": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Livres\\ModifierLivre.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Livres\\ModifierLivre.cshtml",
+              "ToolTip": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Livres\\ModifierLivre.cshtml",
+              "RelativeToolTip": "Pages\\Admin\\Livres\\ModifierLivre.cshtml",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAnwFgAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-04T04:09:53.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ModifierUtilisateur.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Utilisateurs\\ModifierUtilisateur.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Utilisateurs\\ModifierUtilisateur.cshtml.cs",
+              "ToolTip": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Utilisateurs\\ModifierUtilisateur.cshtml.cs",
+              "RelativeToolTip": "Pages\\Admin\\Utilisateurs\\ModifierUtilisateur.cshtml.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-04T04:17:40.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ModifierLivre.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Livres\\ModifierLivre.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Livres\\ModifierLivre.cshtml.cs",
+              "ToolTip": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Livres\\ModifierLivre.cshtml.cs",
+              "RelativeToolTip": "Pages\\Admin\\Livres\\ModifierLivre.cshtml.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAuwDAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-04T04:10:03.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AjouterAuteur.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Auteurs\\AjouterAuteur.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Auteurs\\AjouterAuteur.cshtml.cs",
+              "ToolTip": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Auteurs\\AjouterAuteur.cshtml.cs",
+              "RelativeToolTip": "Pages\\Admin\\Auteurs\\AjouterAuteur.cshtml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-04T04:06:57.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ModifierAuteur.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Auteurs\\ModifierAuteur.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Auteurs\\ModifierAuteur.cshtml.cs",
+              "ToolTip": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Auteurs\\ModifierAuteur.cshtml.cs",
+              "RelativeToolTip": "Pages\\Admin\\Auteurs\\ModifierAuteur.cshtml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-04T04:06:11.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Auteurs.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Auteurs\\Auteurs.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Auteurs\\Auteurs.cshtml.cs",
+              "ToolTip": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Auteurs\\Auteurs.cshtml.cs",
+              "RelativeToolTip": "Pages\\Admin\\Auteurs\\Auteurs.cshtml.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA9wCcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-04T04:05:24.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ModifierCategorie.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Categories\\ModifierCategorie.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Categories\\ModifierCategorie.cshtml.cs",
+              "ToolTip": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Categories\\ModifierCategorie.cshtml.cs",
+              "RelativeToolTip": "Pages\\Admin\\Categories\\ModifierCategorie.cshtml.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-04T04:05:07.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AjouterUtilisateur.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Utilisateurs\\AjouterUtilisateur.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Utilisateurs\\AjouterUtilisateur.cshtml.cs",
+              "ToolTip": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Utilisateurs\\AjouterUtilisateur.cshtml.cs",
+              "RelativeToolTip": "Pages\\Admin\\Utilisateurs\\AjouterUtilisateur.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-04T04:04:44.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AjouterCategorie.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Categories\\AjouterCategorie.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Categories\\AjouterCategorie.cshtml.cs",
+              "ToolTip": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Categories\\AjouterCategorie.cshtml.cs",
+              "RelativeToolTip": "Pages\\Admin\\Categories\\AjouterCategorie.cshtml.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-04T04:04:11.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Categories.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Categories\\Categories.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Categories\\Categories.cshtml.cs",
+              "ToolTip": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\Pages\\Admin\\Categories\\Categories.cshtml.cs",
+              "RelativeToolTip": "Pages\\Admin\\Categories\\Categories.cshtml.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAwwCYAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-04T04:03:20.096Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

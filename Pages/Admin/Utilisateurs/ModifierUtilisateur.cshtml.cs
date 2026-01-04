@@ -20,14 +20,21 @@ namespace GestionBibliotheque.Pages.Admin
                 return RedirectToPage("/login");
             }
             NewUtilisateur = UtilisateurService.GestUserById(Id);
+            if (NewUtilisateur == null)
+            {
+                return NotFound(); 
+            }
             return Page();
         }
 
         public IActionResult OnPost()
         {
-
+            if (String.IsNullOrEmpty(HttpContext.Session.GetString("User_id")))
+            {
+                return RedirectToPage("/login");
+            }
             NewUtilisateur.Id_utilisateur = Id; 
-            if (UtilisateurService.CountUsersByNomPrenom(NewUtilisateur.Nom, NewUtilisateur.Prenom, Id) == 1)
+            if (UtilisateurService.CountUsersSameNameDifferentId(NewUtilisateur.Nom , NewUtilisateur.Prenom , Id) > 0)
             {
                 MessageErr = "Un utilisateur avec ce nom et prénom existe déjà.";
                 return Page();

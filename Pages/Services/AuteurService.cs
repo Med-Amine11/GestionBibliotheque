@@ -191,7 +191,7 @@ namespace GestionBibliotheque.Pages.Services
             try
             {
                 OpenConnection();
-                String sql = "select * from auteur where id_auteur = @Id";
+                String sql = "select nom , prenom , date_naissance , date_deces , nationalite , biographie , photo from auteur where id_auteur = @Id";
                 using (SqlCommand cmd = new SqlCommand(sql, con))
                 {
                     cmd.Parameters.AddWithValue("@Id", id);
@@ -199,14 +199,14 @@ namespace GestionBibliotheque.Pages.Services
                     {
                         if (reader.Read())
                         {
-                            auteur = new Auteur(reader.GetInt32(0), 
-                                reader.GetString(1) , 
-                                reader.GetString(2) ,
-                                reader.GetDateTime(3) , 
-                                reader.IsDBNull(4) ? null : reader.GetDateTime(4) , 
-                                reader.GetString(5) , 
-                                reader.GetString(6) ,   
-                                reader.GetString(7) 
+                            auteur = new Auteur(id, 
+                                reader.GetString(0) , 
+                                reader.GetString(1) ,
+                                reader.GetDateTime(2) , 
+                                reader.IsDBNull(3) ? null : reader.GetDateTime(4) , 
+                                reader.GetString(4) , 
+                                reader.GetString(5) ,   
+                                reader.GetString(6) 
                                 
                                 );
                         }
@@ -279,5 +279,31 @@ namespace GestionBibliotheque.Pages.Services
             return ligne;
         }
 
+        public static int CountAuthorsSameNameDifferentId(String nom ,  String prenom , int id)
+        {
+            int count = 0;
+
+            try
+            {
+                OpenConnection();
+                String sql = "select count(*) from auteur where nom = @Nom and prenom = @Prenom and id_auteur != @Id";
+                using (SqlCommand cmd = new SqlCommand(sql, con))
+                {
+                    cmd.Parameters.AddWithValue("@Nom", nom);  
+                    cmd.Parameters.AddWithValue("@Prenom", prenom);  
+                    cmd.Parameters.AddWithValue("@Id", id);  
+                    count = (int)cmd.ExecuteScalar();
+                }
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine (ex.Message);
+            }
+            finally
+            {
+                con.Close ();
+            }
+            return count;
+        }
     }
 }

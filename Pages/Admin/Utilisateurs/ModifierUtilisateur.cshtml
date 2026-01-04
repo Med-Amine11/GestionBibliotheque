@@ -13,7 +13,7 @@
                 @Model.MessageErr
             </div>
         }
-        <form method="post">
+        <form method="post" id="editForm">
             <div class="form-group mb-3">
                 <label asp-for="NewUtilisateur.Nom"></label>
                 <input asp-for="NewUtilisateur.Nom" class="form-control" type="text" required />
@@ -55,10 +55,16 @@
             </div>
             <div class="form-group mb-3">
                 <label asp-for="NewUtilisateur.Actif"></label>
-                <input asp-for="NewUtilisateur.Actif" class="form-control" type="text" required />
+                <select asp-for="NewUtilisateur.Actif" class="form-control" required>
+                    @{
+                        Boolean v = Model.NewUtilisateur.Actif ? true : false;
+                    }
+                    <option value="@Model.NewUtilisateur.Actif" selected> @v</option>
+                    <option value="@(!@Model.NewUtilisateur.Actif)"> @(!@v) </option>
+                </select>
             </div>
             <div class="d-flex justify-content-between mt-4">
-                <button type="submit" class="btn btn-success">
+                <button type="submit" class="btn btn-success" id="submitBtn" disabled >
                     Modifier
                 </button>
                 <a asp-page="Utilisateurs" class="btn btn-secondary">
@@ -68,3 +74,5 @@
         </form>
     </div>
 </div>
+
+<script src="~/js/site.js"> </script>
