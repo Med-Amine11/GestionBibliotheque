@@ -2,4 +2,126 @@
 @model GestionBibliotheque.Pages.Admin.EmpruntsModel
 @{
 }
-<h1>Emprunts</h1>
+<h2 class="text-center mb-4">Liste des emprunts</h2>
+@* Affiche les erreurs globales *@
+@if (!String.IsNullOrEmpty(Model.MessageErr))
+{
+    <div class="alert alert-danger" style="text-align : center">
+        @Model.MessageErr
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+@if (Model.Emprunts != null && Model.Emprunts.Any())
+{
+    var groupes = Model.Emprunts.GroupBy(e => e.Status);
+
+    foreach (var groupe in groupes)
+    {
+        string titre = groupe.Key switch
+        {
+            "en_attente" => "En attente",
+            "en_cours" => "En cours",
+            "en_retard" => "En retard",
+        };
+
+        <h2 class="mt-4">@titre</h2>
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Livre</th>
+                    <th>Date emprunt</th>
+                    <th>Date retour prévue</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var e in groupe)
+                {
+                    <tr>
+                        <td>@e.NomUtilisateur</td>
+                        <td>@e.PrenomUtilisateur</td>
+                        <td>@e.TitreLivre</td>
+                        <td>@e.DateEmprunt.ToString("dd/MM/yyyy")</td>
+                        <td>@e.DateRetourPrevue.ToString("dd/MM/yyyy")</td>
+                        <td>
+                            @* Actions selon le statut *@
+                            @if (e.Status == "en_attente")
+                            {
+                                <form method="post" >
+                                    <button class="btn btn-primary "
+                                             type="submit"
+                                             asp-page-handler="PasserEnCours" 
+                                                asp-route-id ="@e.Id_emprunt">
+                                        Passer en cours
+                                    </button>
+                                    <button type="submit"
+                                            class="btn btn-danger "
+                                            asp-page-handler="Annuler"
+                                            asp-route-id="@e.Id_emprunt">
+                                        Annuler
+                                    </button>
+                                </form>
+                            }
+                            else if (e.Status == "en_cours")
+                            {
+                                <form method="post" >
+                                    <button class="btn btn-primary "
+                                             type="submit"
+                                           asp-page-handler="Terminer"
+                                            asp-route-id="@e.Id_emprunt">
+                                        Terminer
+                                    </button>
+                                    
+                                    <button type="submit"
+                                            class="btn btn-warning"
+                                            asp-page-handler="Rappeler"
+                                            asp-route-id="@e.Id_emprunt"
+                                            onclick="return confirm('Êtes-vous sûr de vouloir informer l\'utilisateur ?');" >
+                                       Rappeler
+                                    </button>
+                                    @if ((DateTime.Today - e.DateRetourPrevue).Days > 3)
+                                    {
+                                    <button type="submit"
+                                            class="btn btn-secondary "
+                                            asp-page-handler="EnRetard"
+                                            asp-route-id="@e.Id_emprunt">
+                                        En Retard
+                                    </button>
+                                    }
+
+                                    <button type="submit"
+                                            class="btn btn-danger "
+                                            asp-page-handler="Annuler"
+                                            asp-route-id="@e.Id_emprunt"
+                                            onclick="return confirm('Êtes-vous sûr de vouloir annuler cet emprunt ?');">
+                                        Annuler
+                                    </button>
+                                </form>
+                            }
+                            else if (e.Status == "en_retard")
+                            {
+                                <form method="post" >
+                                    <button type="submit" 
+                                        class="btn btn-danger btn-sm"
+                                            asp-page-handler ="AjouterPenalite"
+                                            asp-route-id="@e.Id_emprunt">
+                                        Ajouter pénalité
+                                    </button>
+                                </form>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+}
+else
+{
+    <div  style="text-align : center">
+        Aucun emprunt en cours.
+    </div>
+}

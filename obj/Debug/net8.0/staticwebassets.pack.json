@@ -9,8 +9,16 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\images\\categories\\8ba3a80f-29f6-4161-bfe2-b03f5fa71844.jpg",
-      "PackagePath": "staticwebassets\\images\\categories\\8ba3a80f-29f6-4161-bfe2-b03f5fa71844.jpg"
+      "Id": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\images\\auteurs\\ac168cc9-3783-4cfe-b9bf-5823d4480640.jpg",
+      "PackagePath": "staticwebassets\\images\\auteurs\\ac168cc9-3783-4cfe-b9bf-5823d4480640.jpg"
+    },
+    {
+      "Id": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\images\\categories\\85fd6b7c-c580-4ac7-9213-0f4dad10f1b0.jpg",
+      "PackagePath": "staticwebassets\\images\\categories\\85fd6b7c-c580-4ac7-9213-0f4dad10f1b0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\images\\livres\\f5e29bef-589d-4353-bd14-53c32deab063.jpg",
+      "PackagePath": "staticwebassets\\images\\livres\\f5e29bef-589d-4353-bd14-53c32deab063.jpg"
     },
     {
       "Id": "C:\\Users\\J.P.M\\Desktop\\GestionBibliotheque\\wwwroot\\js\\site.js",
